@@ -1,0 +1,117 @@
+@import './variables.scss';
+@import './mixin.scss';
+
+html,
+body .app {
+  color: #333333;
+  font-family: Arial, Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, sans-serif;
+  background-color: $background-color;
+}
+
+.app-container {
+  padding-bottom: 50px;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.fk-cn-title {
+  font-family: PingFangSC-Medium;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  // line-height: 29px;
+  letter-spacing: 0px;
+  color: #000000;
+}
+.fk-en-title {
+  font-family: PingFangSC-Medium;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  // line-height: 29px;
+  letter-spacing: 0px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+.fk-content {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: #333333;
+  text-align: left;
+  padding: 0 5px;
+  &-text {
+    font-family: PingFangSC-Light;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #333333;
+  }
+  &-text2 {
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 29px;
+    letter-spacing: 1px;
+    color: #047fc5;
+  }
+  &-title {
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 29px;
+    letter-spacing: 1px;
+    color: #333333;
+  }
+  &-title2 {
+    font-family: PingFangSC-Medium;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 29px;
+    letter-spacing: 1px;
+    color: #333333;
+  }
+}
+.text-r {
+  text-align: right;
+}
+.margin-t-13 {
+  margin-top: 13px;
+}
+.margin-t-10 {
+  margin-top: 10px;
+}
+.padding-l-r-15 {
+  padding: 0 15px;
+}
+.fk-container {
+  background-color: #fff;
+  width: 100%;
+  // height: 86.5vh;
+}
+.display-flex-space {
+  display: flex;
+  justify-content: space-between;
+}
+
+.width-50 {
+  width: 180px;
+  height: 210px;
+}
+.margin-t-5 {
+  margin-top: 5px;
+}
+
+.display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.padding-b-10 {
+  padding-bottom: 10px;
+}

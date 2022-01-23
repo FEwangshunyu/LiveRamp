@@ -1,0 +1,30 @@
+/**
+ * 基础路由
+ * @type { *[] }
+ */
+export const constantRouterMap = [
+  {
+    path: '/',
+    component: () => import('@/views/layouts/index'),
+    redirect: '/home',
+    meta: {
+      title: '通讯录',
+      keepAlive: false
+    },
+    children: [
+      {
+        path: '/home',
+        name: 'Home',
+        component: () => import('@/views/home/index'),
+        meta: { title: '通讯录', keepAlive: true }
+      },
+
+      {
+        path: '/about',
+        name: 'About',
+        component: () => import('@/views/home/about'),
+        meta: { title: '查询记录', keepAlive: true }
+      }
+    ]
+  }
+]
