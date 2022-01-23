@@ -85,34 +85,35 @@ export default {
       this.$store.dispatch('setSearchList', this.user)
     },
     upFunc() {
-      this.infoList.forEach((el, index) => {
-        if (el.name === this.user.name) {
-          if (index === 0) {
-            this.user = this.infoList[this.infoList.length - 1]
-            this.user.date = parseTime(new Date())
-            this.$store.dispatch('setSearchList', this.user)
-          } else {
-            this.user = this.infoList[index - 1]
-            this.user.date = parseTime(new Date())
-            this.$store.dispatch('setSearchList', this.user)
-          }
-        }
+      const name = this.user.name
+      const index = this.infoList.findIndex(function(item) {
+        return item.name === name
       })
+
+      if (index === 0) {
+        this.user = this.infoList[this.infoList.length - 1]
+        this.user.date = parseTime(new Date())
+        this.$store.dispatch('setSearchList', this.user)
+      } else {
+        this.user = this.infoList[index - 1]
+        this.user.date = parseTime(new Date())
+        this.$store.dispatch('setSearchList', this.user)
+      }
     },
     downFunc() {
-      this.infoList.forEach((el, index) => {
-        if (el.name === this.user.name) {
-          if (index === this.infoList.length - 1) {
-            this.user = this.infoList[0]
-            this.user.date = parseTime(new Date())
-            this.$store.dispatch('setSearchList', this.user)
-          } else {
-            this.user = this.infoList[index + 1]
-            this.user.date = parseTime(new Date())
-            this.$store.dispatch('setSearchList', this.user)
-          }
-        }
+      const name = this.user.name
+      const index = this.infoList.findIndex(function(item) {
+        return item.name === name
       })
+      if (index === this.infoList.length - 1) {
+        this.user = this.infoList[0]
+        this.user.date = parseTime(new Date())
+        this.$store.dispatch('setSearchList', this.user)
+      } else {
+        this.user = this.infoList[index + 1]
+        this.user.date = parseTime(new Date())
+        this.$store.dispatch('setSearchList', this.user)
+      }
     }
   }
 }

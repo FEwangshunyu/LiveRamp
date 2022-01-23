@@ -110,6 +110,7 @@ export default {
           this.finished = true
           //   setInterval(() => {
           setTimeout(() => {
+            this.infoList = []
             for (let i = 0; i < 11; i++) {
               this.userList[i].child.forEach(el => {
                 this.infoList.push(el)
